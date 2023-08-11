@@ -11,7 +11,7 @@ const Index = () => {
         />
       }
     >
-      <div>메인 페이지</div>
+      <div>1메인 페이지</div>
       <div>배포 페이지</div>
     </Main>
   );
