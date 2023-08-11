@@ -1,4 +1,4 @@
-import { signIn, useSession } from 'next-auth/react';
+import { signIn } from 'next-auth/react';
 
 type LoginBtnProps = {
   children: React.ReactNode;
@@ -20,12 +20,6 @@ const ProviderMap: Record<Provider, string> = {
 };
 
 export default function LoginBtn({ children }: LoginBtnProps) {
-  const { data: session } = useSession();
-
-  if (session) {
-    console.log('session', session);
-  }
-
   const handleSSOLogin = () => {
     const providerKey = children as Provider;
     const provider = ProviderMap[providerKey];
