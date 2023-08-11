@@ -21,6 +21,7 @@ jobs:
           npm install -g yarn
           yarn install --frozen-lockfile
           npm run build
+          yarn next export
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
